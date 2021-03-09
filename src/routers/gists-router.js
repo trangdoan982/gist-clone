@@ -58,7 +58,7 @@ router.get('/gists/:id', auth, async (req, res) => {
 //update a gist with authentification
 router.patch('/gists/:id', auth, async (req, res) => {
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['description', 'completed']
+    const allowedUpdates = ['title', 'content']
     const isValidUpdate = updates.every((update) => allowedUpdates.includes(update))
 
     if (!isValidUpdate) {
