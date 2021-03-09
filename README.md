@@ -23,7 +23,7 @@ This would require your computer to have installed MongoDB, ideally with Robo3T,
 
 ### Create HTTP Request
 
-Since I haven't finished wiring this back-end to the front-end, you would need to fire HTTP requests as a developer :(. I use Postman. 
+Since I haven't finished wiring this back-end to the front-end, you would need to fire HTTP requests in Postman for now 🙁. 
 
 You can download Postman. Then import the file "Gist Clone.postman_collection.json" into Postman and tinker around with the requests. If I have more time I'll wire the back-end with front-end.
 
