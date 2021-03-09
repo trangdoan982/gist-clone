@@ -21,10 +21,19 @@ router.post('/gists', auth, async (req, res) => {
 
 //Get all gists for logged in user
 router.get('/gists', auth, async (req, res) => {
-    const user = req.user
     try{
         await user.populate('myGist').execPopulate()
         res.send(user.myGist)
+    } catch (e) {
+        res.status(500).send(e)
+    }
+})
+
+//Get all gists to populate the Discover view
+router.get('/gists/all', async (req, res) => {
+    try{
+        const allGists = await Gist.find({})
+        res.send(allGists)
     } catch (e) {
         res.status(500).send(e)
     }
